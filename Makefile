@@ -43,7 +43,7 @@ $(NAME): $(OBJ)
 	@echo  "\n"
 	@echo  "$(RED) >\tCOMPILATION FINISHED\t<\n$(WHITE)"
 
-#	@$(USLEEP)
+	@$(USLEEP)
 
 	@echo 	""
 	@echo  "$(RED) >\tARCHIVES' CONTENT TABLES BUILDING & BINARIES' LINKAGE\t<\n"
@@ -52,7 +52,7 @@ $(NAME): $(OBJ)
 
 	@echo  "$(CYAN)"
 
-	@cc -o 	$(NAME) $(OBJ) $(LFLAGS)
+	@cc -o 	$(NAME) $(SRC) $(LFLAGS)
 
 	@echo  "\n"
 	@echo  "$(GREEN)\t >\tLIBS & BINARIES' UPDATE : FINISHED\t<\n\n"
@@ -64,16 +64,16 @@ $(NAME): $(OBJ)
 	@echo  "$(WHITE)"
 
 clean:
-#	$(USLEEP)
+	$(USLEEP)
 	@echo "$(RED)\n >\t.o & TEMPORARY FILES DELETED\n$(WHITE)"
 	@rm -rf $(OBJ)
 
 fclean: clean
 	@echo ""
 	@rm -rf $(NAME)
-#	@$(USLEEP)
+	@$(USLEEP)
 	@echo "$(RED) >\tBINARIES DELETED\n$(WHITE)"
-#	@$(USLEEP)
+	@$(USLEEP)
 	@echo "$(CYAN)"
 
 clear:
@@ -90,7 +90,7 @@ re:	clear fclean all
 
 $(MISC):
 	@echo "$(GREY)\n\n\n\t\t\t\t > MAKE TOOLS <\n$(WHITE)"
-#	@$(USLEEP)
+	@$(USLEEP)
 	@(make -C $(MISC) re)
 
 
@@ -116,4 +116,4 @@ boobs:
 ## .PHONY
 ##
 
-.PHONY: all cc link deco_cc deco_link clean fclean re libmy printf tools coffee
+.PHONY: all clean fclean re misc coffee boobs

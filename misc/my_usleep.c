@@ -11,7 +11,10 @@
 int	main()
 {
   int	i;
-  long	stop = 50000000;
+  long	stop = 75000000;
+  long	stop1 = 50000000;
+  long	stop2 = 25000000;
+  long	stop3 = 10000000;
 
   i = 0;
   while (i < stop)

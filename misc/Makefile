@@ -22,10 +22,10 @@ LFLAGS		= -l_my_printf -L lib/
 all: $(NAME_LOADING) $(NAME_USLEEP)
 
 $(NAME_LOADING): $(OBJ_LOADING)
-	cc -o $(NAME_LOADING) $(SRC_LOADING) $(LFLAGS)
+	cc -o $(NAME_LOADING) $(OBJ_LOADING) $(LFLAGS)
 
 $(NAME_USLEEP): $(OBJ_USLEEP)
-	cc -o $(NAME_USLEEP) $(SRC_USLEEP)
+	cc -o $(NAME_USLEEP) $(OBJ_USLEEP)
 
 clean:
 	rm -rf $(OBJ_LOADING)
