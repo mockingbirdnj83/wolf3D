@@ -3,10 +3,10 @@ S : Move backward
 A : Move to left
 D : Move to right
 
-Left Arrow : Size up the map view
+Left Arrow  : Size up the map view
 Right Arrow : Size up the 3D view
-Up Arrow : Increase the density
-Down Arrow : Decrease the density
+Up Arrow    : Increase the density
+Down Arrow  : Decrease the density
 
 NUMPAD 8 : Increase the map's height
 NUMPAD 6 : Increase the map's width

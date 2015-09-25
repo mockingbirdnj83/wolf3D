@@ -16,6 +16,7 @@
 /*& {NO NORM CAN CONTROL ME !!!!} &/*\& {NO NORM CAN CONTROL ME !!!!} &/*\& {NO NORM CAN CONTROL ME !!!!} &*/
 /*& {NO NORM CAN CONTROL ME !!!!} &/*\& {NO NORM CAN CONTROL ME !!!!} &/*\& {NO NORM CAN CONTROL ME !!!!} &*/
 
+/* Ce projet n'a pas été développé dans le but d'être rendu, juste pour le fun. Hooooo !*/
 
 /*****************************************************************************
  * INCLUDES
