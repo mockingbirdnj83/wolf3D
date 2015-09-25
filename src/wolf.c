@@ -1508,7 +1508,6 @@ int processInputs()
   return (ret);
 }
 
-
 int processFramerate()
 {
   int		ret;
@@ -1542,32 +1541,35 @@ int pollEvent()
       case SDL_QUIT :
 	return (1);
       case SDL_KEYUP :
-	if ( sym == SDLK_LEFT )				gGame.moveSeparator = 0;
-	if ( sym == SDLK_RIGHT )			gGame.moveSeparator = 0;
-	if ( sym == SDLK_a && gGame.rotatePlayer < 0)	gGame.rotatePlayer = 0;
-	if ( sym == SDLK_d && gGame.rotatePlayer > 0)	gGame.rotatePlayer = 0;
-	if ( sym == SDLK_w && gGame.movePlayer > 0)	gGame.movePlayer = 0;
-	if ( sym == SDLK_s && gGame.movePlayer < 0)	gGame.movePlayer = 0;
-	if ( sym == SDLK_m )				gGame.showMatrix = 0;
+	if (sym == SDLK_LEFT)				gGame.moveSeparator = 0;
+	if (sym == SDLK_RIGHT)				gGame.moveSeparator = 0;
+	if (sym == SDLK_a && gGame.rotatePlayer < 0)	gGame.rotatePlayer = 0;
+	if (sym == SDLK_d && gGame.rotatePlayer > 0)	gGame.rotatePlayer = 0;
+	if (sym == SDLK_w && gGame.movePlayer > 0)	gGame.movePlayer = 0;
+	if (sym == SDLK_s && gGame.movePlayer < 0)	gGame.movePlayer = 0;
+	if (sym == SDLK_LSHIFT)				gGame.player.speed = 4;
+	if (sym == SDLK_m)				gGame.showMatrix = 0;
 	break;
       case SDL_KEYDOWN :
-	if ( sym == SDLK_ESCAPE )	return (1);
-	if ( sym == SDLK_LEFT )		gGame.moveSeparator = -3;
-	if ( sym == SDLK_RIGHT )	gGame.moveSeparator = 3;
-	if ( sym == SDLK_DOWN )		gGame.moveDensity = -1;
-	if ( sym == SDLK_UP )		gGame.moveDensity = 1;
-	if ( sym == SDLK_KP4 )		gGame.moveMapWidth = -1;
-	if ( sym == SDLK_KP6 )		gGame.moveMapWidth = 1;
-	if ( sym == SDLK_KP2 )		gGame.moveMapHeight = -1;
-	if ( sym == SDLK_KP8 )		gGame.moveMapHeight = 1;
+	if (sym == SDLK_ESCAPE)	return (1);
+	if (sym == SDLK_LEFT)		gGame.moveSeparator = -3;
+	if (sym == SDLK_RIGHT)		gGame.moveSeparator = 3;
+	if (sym == SDLK_DOWN)		gGame.moveDensity = -1;
+	if (sym == SDLK_UP)		gGame.moveDensity = 1;
+	if (sym == SDLK_KP4)		gGame.moveMapWidth = -1;
+	if (sym == SDLK_KP6)		gGame.moveMapWidth = 1;
+	if (sym == SDLK_KP2)		gGame.moveMapHeight = -1;
+	if (sym == SDLK_KP8)		gGame.moveMapHeight = 1;
 
-	if ( sym == SDLK_a )	gGame.rotatePlayer = -ANGLE2; // left
-	if ( sym == SDLK_d )	gGame.rotatePlayer = ANGLE2; // right
-	if ( sym == SDLK_w )	gGame.movePlayer = 1;
-	if ( sym == SDLK_s )	gGame.movePlayer = -1;
+	if (sym == SDLK_a)	gGame.rotatePlayer = -ANGLE2; // left
+	if (sym == SDLK_d)	gGame.rotatePlayer = ANGLE2; // right
+	if (sym == SDLK_w)	gGame.movePlayer = 1;
+	if (sym == SDLK_s)	gGame.movePlayer = -1;
 
-	if ( sym == SDLK_m )	gGame.showMatrix = 1;
-	if ( sym == SDLK_t )	gGame.changeMode = 1;
+	if (sym == SDLK_LSHIFT)	gGame.player.speed = 8;
+
+	if (sym == SDLK_m)	gGame.showMatrix = 1;
+	if (sym == SDLK_t)	gGame.changeMode = 1;
 	break;
       }
     }
