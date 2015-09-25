@@ -76,7 +76,10 @@ fclean: clean
 #	@$(USLEEP)
 	@echo "$(CYAN)"
 
-re:	fclean all
+clear:
+	clear
+
+re:	clear fclean all
 
 
 
@@ -99,10 +102,11 @@ $(MISC):
 
 coffee:
 	@echo "$(CYAN_BRIGHT)"
-	@cat $(MISC)/$@
+	@$(MISC)/$@/$@.sh
 	@echo "$(WHITE)"
 
 boobs:
+	@clear
 	@echo "$(CYAN_BRIGHT)"
 	@cat $(MISC)/$@
 	@echo "$(WHITE)"

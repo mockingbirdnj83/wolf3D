@@ -11,13 +11,13 @@
 SRC_LOADING	= loading.c
 SRC_USLEEP	= my_usleep.c
 
-OBJ_LOADING	= $(SRC:.c=.o)
-OBJ_USLEEP	= $(SRC:.c=.o)
+OBJ_LOADING	= $(SRC_LOADING:.c=.o)
+OBJ_USLEEP	= $(SRC_USLEEP:.c=.o)
 
 NAME_LOADING	= loading
 NAME_USLEEP	= my_usleep
 
-LFLAGS		= -lmy -l_my_printf -L ../lib/
+LFLAGS		= -l_my_printf -L lib/
 
 all: $(NAME_LOADING) $(NAME_USLEEP)
 
