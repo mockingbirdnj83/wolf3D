@@ -14,7 +14,7 @@ NUMPAD 4 : Decrease the map's height
 NUMPAD 2 : Decrease the map's width
 
 T : Switch mode [Cube | Face]. Default is CUBE.
-Face isn't finished and it'll remain like that.
+Face mode isn't finished and it'll remain like that.
 
 
      M : Show the matrix.
