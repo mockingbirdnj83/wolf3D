@@ -4,7 +4,7 @@
 ** Made by au
 ** Login   <aubess_t@epitech.net>
 **
-** Started on  Thu Dec 10 00:39:33 2014 au
+** Started on  Thu Dec 01 00:39:33 2013 au
 ** Last update Fri Feb 28 16:31:42 2014 au
 */
 
@@ -16,7 +16,7 @@
 /*& {NO NORM CAN CONTROL ME !!!!} &/*\& {NO NORM CAN CONTROL ME !!!!} &/*\& {NO NORM CAN CONTROL ME !!!!} &*/
 /*& {NO NORM CAN CONTROL ME !!!!} &/*\& {NO NORM CAN CONTROL ME !!!!} &/*\& {NO NORM CAN CONTROL ME !!!!} &*/
 
-/* Ce projet n'a pas été développé dans le but d'être rendu, juste pour le fun. Hooooo !*/
+/* Ce projet n'a pas Ã©tÃ© dÃ©veloppÃ© dans le but d'Ãªtre rendu, juste pour le fun. Hooooo !*/
 
 /*****************************************************************************
  * INCLUDES
@@ -44,8 +44,8 @@
 
 #define		MRAND_MAX		(0x7fff)
 
-#ifndef M_PI
-#define		M_PI			(3.14159265358979323846)
+#ifndef 	M_PI
+# define	M_PI			(3.14159265358979323846)
 #endif
 
 #define		SCREEN_WIDTH		(1920)
@@ -72,8 +72,7 @@
 #define		ENEMY_MSK		(7<<2)
 #define		OBJECT_MSK		(7<<5)
 
-typedef struct	s_pos
-{
+typedef struct	s_pos {
   int		x;
   int		y;
 }		pos;
@@ -152,7 +151,7 @@ typedef struct	s_surfaces {
   SDL_Surface*	framerate;
   SDL_Surface*	density;
   SDL_Surface*	mapSize;
-} surfaces;
+} 		surfaces;
 
 typedef struct	s_game {
   int		mode;
@@ -568,7 +567,7 @@ int createMaze()
 
 /*
  * cell :   7  6  5   4  3  2   1   0
- *        ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨
+ *        Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨
  *        | objects | enemies | walls |
  *
  * walls encoding :       .     .
